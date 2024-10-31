@@ -28,7 +28,7 @@ export default class AccessTokenHelpers {
         const result = await fetch("https://accounts.spotify.com/api/token", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: params
+            body: params.toString()
         });
 
         const text = await result.text();
